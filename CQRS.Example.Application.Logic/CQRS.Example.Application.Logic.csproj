@@ -1,0 +1,13 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\CQRS.Example.Application\CQRS.Example.Application.csproj" />
+    <ProjectReference Include="..\CQRS.Example.Domain\CQRS.Example.Domain.csproj" />
+  </ItemGroup>
+
+</Project>
