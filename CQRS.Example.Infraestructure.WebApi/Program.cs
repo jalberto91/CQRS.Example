@@ -1,7 +1,10 @@
 using CQRS.Example.Application.Contracts;
 using CQRS.Example.Application.Logic.Student;
 using CQRS.Example.Infraestructure.Data.Contexts;
+using CQRS.Example.Infraestructure.WebApi;
+using Microsoft.AspNetCore.Localization;
 using Microsoft.EntityFrameworkCore;
+using System.Globalization;
 using System.Reflection;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -17,7 +20,28 @@ builder.Services.AddDbContext<CqrsExampleContext>(option => option.UseSqlServer(
 builder.Services.AddMediatR(cfg => cfg.RegisterServicesFromAssembly(Assembly.Load("CQRS.Example.Application")));
 builder.Services.AddScoped<IStudentLogic, StudentLogic>();
 
+builder.Services.AddLocalization(options => options.ResourcesPath = "CQRS.Example.Resources");
+
 var app = builder.Build();
+
+var supportedCultures = new[]
+{
+    new CultureInfo("en"),
+    new CultureInfo("es")
+};
+
+var localizationOptions = new RequestLocalizationOptions
+{
+    DefaultRequestCulture = new RequestCulture("en"),
+    SupportedCultures = supportedCultures,
+    SupportedUICultures = supportedCultures,
+    RequestCultureProviders = new List<IRequestCultureProvider>
+    {
+        new RouteDataRequestCultureProvider()
+    }
+};
+
+app.UseRequestLocalization(localizationOptions);
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())

@@ -21,6 +21,7 @@
     <ProjectReference Include="..\CQRS.Example.Application.Logic\CQRS.Example.Application.Logic.csproj" />
     <ProjectReference Include="..\CQRS.Example.Application\CQRS.Example.Application.csproj" />
     <ProjectReference Include="..\CQRS.Example.Infraestructure.Data\CQRS.Example.Infraestructure.Data.csproj" />
+    <ProjectReference Include="..\CQRS.Example.Resources\CQRS.Example.Resources.csproj" />
   </ItemGroup>
 
 </Project>

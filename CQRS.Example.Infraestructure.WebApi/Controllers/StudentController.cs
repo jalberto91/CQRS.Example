@@ -2,9 +2,11 @@
 using CQRS.Example.Domain.Entities;
 using Microsoft.AspNetCore.Mvc;
 
+//using Microsoft.Extensions.Localization;
+
 namespace CQRS.Example.Infraestructure.WebApi.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("{culture}/api/[controller]")]
     [ApiController]
     public class StudentController : ControllerBase
     {
@@ -21,11 +23,11 @@ namespace CQRS.Example.Infraestructure.WebApi.Controllers
         {
             try
             {
-                return this.Ok(await this.studentLogic.GetStudents());
+                return Ok(await this.studentLogic.GetStudents());
             }
             catch (Exception ex)
             {
-                return this.BadRequest(ex.Message);
+                return BadRequest(ex.Message);
             }
         }
 
@@ -35,11 +37,11 @@ namespace CQRS.Example.Infraestructure.WebApi.Controllers
         {
             try
             {
-                return this.Ok(await this.studentLogic.GetStudentById(id));
+                return Ok(await this.studentLogic.GetStudentById(id));
             }
             catch (Exception ex)
             {
-                return this.BadRequest(ex.Message);
+                return BadRequest(ex.Message);
             }
         }
 
@@ -48,11 +50,11 @@ namespace CQRS.Example.Infraestructure.WebApi.Controllers
         {
             try
             {
-                return this.Ok(await this.studentLogic.AddStudent(student));
+                return Ok(await this.studentLogic.AddStudent(student));
             }
             catch (Exception ex)
             {
-                return this.BadRequest(ex.Message);
+                return BadRequest(ex.Message);
             }
         }
     }

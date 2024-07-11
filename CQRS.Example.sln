@@ -3,15 +3,17 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.8.34330.188
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CQRS.Example.Domain", "CQRS.Example.Domain\CQRS.Example.Domain.csproj", "{A3CAD299-47AC-4512-8394-FCDA70EBEE98}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CQRS.Example.Domain", "CQRS.Example.Domain\CQRS.Example.Domain.csproj", "{A3CAD299-47AC-4512-8394-FCDA70EBEE98}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CQRS.Example.Application", "CQRS.Example.Application\CQRS.Example.Application.csproj", "{65C91D9B-D5BE-4799-8948-F9D42353F460}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CQRS.Example.Application", "CQRS.Example.Application\CQRS.Example.Application.csproj", "{65C91D9B-D5BE-4799-8948-F9D42353F460}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CQRS.Example.Infraestructure.Data", "CQRS.Example.Infraestructure.Data\CQRS.Example.Infraestructure.Data.csproj", "{7E690E79-CEA3-45AB-B4C4-BEA98B6ED774}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CQRS.Example.Infraestructure.Data", "CQRS.Example.Infraestructure.Data\CQRS.Example.Infraestructure.Data.csproj", "{7E690E79-CEA3-45AB-B4C4-BEA98B6ED774}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CQRS.Example.Infraestructure.WebApi", "CQRS.Example.Infraestructure.WebApi\CQRS.Example.Infraestructure.WebApi.csproj", "{5CE1C0F0-F4E3-4453-95BA-CE29A9DEFD5F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CQRS.Example.Infraestructure.WebApi", "CQRS.Example.Infraestructure.WebApi\CQRS.Example.Infraestructure.WebApi.csproj", "{5CE1C0F0-F4E3-4453-95BA-CE29A9DEFD5F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CQRS.Example.Application.Logic", "CQRS.Example.Application.Logic\CQRS.Example.Application.Logic.csproj", "{52ADC332-1890-4164-BA3A-B284196A8A21}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CQRS.Example.Application.Logic", "CQRS.Example.Application.Logic\CQRS.Example.Application.Logic.csproj", "{52ADC332-1890-4164-BA3A-B284196A8A21}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CQRS.Example.Resources", "CQRS.Example.Resources\CQRS.Example.Resources.csproj", "{9796D11B-6A88-4D19-B5C5-3FE253792B16}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{52ADC332-1890-4164-BA3A-B284196A8A21}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{52ADC332-1890-4164-BA3A-B284196A8A21}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{52ADC332-1890-4164-BA3A-B284196A8A21}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9796D11B-6A88-4D19-B5C5-3FE253792B16}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9796D11B-6A88-4D19-B5C5-3FE253792B16}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9796D11B-6A88-4D19-B5C5-3FE253792B16}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9796D11B-6A88-4D19-B5C5-3FE253792B16}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

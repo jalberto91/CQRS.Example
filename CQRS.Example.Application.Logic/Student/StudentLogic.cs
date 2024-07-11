@@ -41,6 +41,13 @@ namespace CQRS.Example.Application.Logic.Student
             {
                 var query = new GetStudentByIdTaskQuery(id);
                 var student = await this.mediator.Send(query);
+                if (student == null)
+                {
+                    //throw new Exception(Resources.Language.NoExistStudent);
+                    //throw new Exception(_messageLocalizer.GetLocalizedMessage("value1"));
+                    //_messageLocalizer.GetLocalizedMessage
+                    throw new Exception(Resources.Language.value1);
+                }
                 return student;
             }
             catch (Exception ex)
@@ -54,6 +61,7 @@ namespace CQRS.Example.Application.Logic.Student
         {
             try
             {
+                //throw new Exception(Resources.)
                 return await this.mediator.Send(new GetStudentsTaskQuery());
             }
             catch (Exception ex)

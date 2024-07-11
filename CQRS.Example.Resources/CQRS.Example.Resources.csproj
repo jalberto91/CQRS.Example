@@ -1,0 +1,39 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Update="Language.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Language.resx</DependentUpon>
+    </Compile>
+    <Compile Update="Language.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Language.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Language.en.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <CustomToolNamespace>Resources</CustomToolNamespace>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Language.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Language.Designer.cs</LastGenOutput>
+      <CustomToolNamespace></CustomToolNamespace>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Language.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Language.Designer.cs</LastGenOutput>
+      <CustomToolNamespace>Resources</CustomToolNamespace>
+    </EmbeddedResource>
+  </ItemGroup>
+
+</Project>
